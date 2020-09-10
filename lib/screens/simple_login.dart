@@ -34,7 +34,13 @@ class _SimpleLoginState extends State<SimpleLogin> {
                       border: OutlineInputBorder(),
                       
                       hintText: 'Enter your name',
-                      labelText: 'Name'),
+                      labelText: 'Name',
+                      prefixIcon:Icon(
+                        Icons.email,
+                        color:Color(0xff5ac18e),
+                        
+                      )
+                      ),
                   inputFormatters: [new LengthLimitingTextInputFormatter(10)],
                   validator: (value) {
                     if (value.isEmpty) {
@@ -45,6 +51,7 @@ class _SimpleLoginState extends State<SimpleLogin> {
                   onSaved: (value) {
                     user.name = value;
                   },
+                  
                 ),
                 SizedBox(
                   height: 20,
